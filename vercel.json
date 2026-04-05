@@ -1,0 +1,4 @@
+{
+  "buildCommand": "pnpm --filter @workspace/ri-car-detailing run build",
+  "outputDirectory": "artifacts/ri-car-detailing/dist"
+}
