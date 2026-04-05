@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Zap } from 'lucide-react';
+import { SITE } from '@/lib/site';
 
 export default function CTA() {
   return (
@@ -85,7 +86,7 @@ export default function CTA() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
           <a
-            href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service"
+            href={SITE.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="relative group inline-flex items-center gap-3 px-12 py-5 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden"
@@ -112,7 +113,7 @@ export default function CTA() {
           {[
             { label: '500+', sub: 'Cars Cleaned', color: '#FFD700' },
             { label: '100%', sub: 'Satisfaction Rate', color: '#06b6d4' },
-            { label: '4.9★', sub: 'Customer Rating', color: '#8b5cf6' },
+            { label: '4.9/5', sub: 'Customer Rating', color: '#8b5cf6' },
           ].map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-3xl font-black" style={{ color: stat.color }}>{stat.label}</div>
@@ -124,3 +125,4 @@ export default function CTA() {
     </section>
   );
 }
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaInstagram } from 'react-icons/fa';
-import { MapPin, User, Phone } from 'lucide-react';
+import { MapPin, User, Phone, MessageCircle, Instagram } from 'lucide-react';
+import { SITE } from '@/lib/site';
 
 export default function Contact() {
   return (
@@ -31,17 +31,17 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-white/50 text-sm uppercase tracking-wider mb-1">Founder</p>
-                <p className="text-xl font-bold text-white">Sakthikumar</p>
+                <p className="text-xl font-bold text-white">{SITE.founder}</p>
               </div>
             </div>
 
-            <a href="tel:8778341878" className="flex items-start gap-4 group">
+            <a href={`tel:${SITE.phonePlain}`} className="flex items-start gap-4 group">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
                 <Phone className="text-primary w-6 h-6 group-hover:text-primary-foreground" />
               </div>
               <div>
                 <p className="text-white/50 text-sm uppercase tracking-wider mb-1">Phone</p>
-                <p className="text-xl font-bold text-white group-hover:text-primary transition-colors">+91 8778341878</p>
+                <p className="text-xl font-bold text-white group-hover:text-primary transition-colors">{SITE.phoneDisplay}</p>
               </div>
             </a>
 
@@ -51,7 +51,11 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-white/50 text-sm uppercase tracking-wider mb-1">Service Areas</p>
-                <p className="text-xl font-bold text-white leading-relaxed">Arumuganeri, Thoothukudi,<br/>Tiruchendur</p>
+                <p className="text-xl font-bold leading-relaxed text-white">
+                  {SITE.serviceAreas[0]}, {SITE.serviceAreas[1]},
+                  <br />
+                  {SITE.serviceAreas[2]}
+                </p>
               </div>
             </div>
           </motion.div>
@@ -63,27 +67,27 @@ export default function Contact() {
             className="flex flex-col gap-4"
           >
             <a 
-              href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service"
+              href={SITE.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/30 hover:bg-[#25D366] text-white transition-all duration-300 group"
             >
-              <FaWhatsapp className="w-8 h-8 text-[#25D366] group-hover:text-white" />
+              <MessageCircle className="w-8 h-8 text-[#25D366] group-hover:text-white" />
               <span className="font-bold text-lg">Chat on WhatsApp</span>
             </a>
 
             <a 
-              href="https://www.instagram.com/ri_car_detailing_01?igsh=dDk5eWV1azRsYTV1"
+              href={SITE.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 rounded-2xl bg-gradient-to-r from-[#833AB4]/10 via-[#FD1D1D]/10 to-[#F56040]/10 border border-[#FD1D1D]/30 hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F56040] text-white transition-all duration-300 group"
             >
-              <FaInstagram className="w-8 h-8 text-[#FD1D1D] group-hover:text-white" />
+              <Instagram className="w-8 h-8 text-[#FD1D1D] group-hover:text-white" />
               <span className="font-bold text-lg">Follow on Instagram</span>
             </a>
 
             <a 
-              href="https://www.google.com/search?kgmid=%2Fm%2F0f0699&hl=en-IN&q=Arumuganeri"
+              href={SITE.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-5 rounded-2xl bg-blue-500/10 border border-blue-500/30 hover:bg-blue-600 text-white transition-all duration-300 group"

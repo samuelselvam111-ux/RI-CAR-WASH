@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2 } from 'lucide-react';
+import { SITE } from '@/lib/site';
 
 const features = [
   "Tyre Polish",
@@ -11,10 +12,10 @@ const features = [
 
 export default function PremiumPackage() {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section id="premium-package" className="py-24 relative overflow-hidden">
       {/* Dynamic Background */}
       <div className="absolute inset-0 bg-primary/5"></div>
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1920&q=80')] bg-cover bg-center mix-blend-overlay opacity-20"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.2),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(6,182,212,0.16),transparent_30%),linear-gradient(120deg,rgba(255,255,255,0.04),transparent_42%,rgba(255,215,0,0.08)_100%)]"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-transparent"></div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -29,7 +30,7 @@ export default function PremiumPackage() {
               Premium Detailing Package
             </h2>
             <div className="text-3xl md:text-4xl font-bold text-primary mb-10">
-              ₹500 <span className="text-xl text-white/50 font-normal">Complete Care</span>
+              Rs.500 <span className="text-xl text-white/50 font-normal">Complete Care</span>
             </div>
 
             <ul className="space-y-4 mb-12">
@@ -49,7 +50,7 @@ export default function PremiumPackage() {
             </ul>
 
             <a 
-              href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20the%20Premium%20Detailing%20Package"
+              href={SITE.premiumWhatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-10 py-5 bg-primary text-primary-foreground font-bold text-lg rounded-full gold-glow hover:scale-105 transition-transform"
@@ -62,3 +63,4 @@ export default function PremiumPackage() {
     </section>
   );
 }
+

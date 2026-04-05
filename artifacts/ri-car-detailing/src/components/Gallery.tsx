@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Droplets, Circle, Wind, Sparkles, Eye, Star, CheckCircle2 } from 'lucide-react';
+import { SITE } from '@/lib/site';
 
 const showcaseItems = [
   {
@@ -233,7 +234,7 @@ export default function Gallery() {
                 {/* Bottom bar */}
                 <div className="mt-6 pt-5 border-t border-white/5">
                   <a
-                    href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service"
+                    href={SITE.whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`block w-full py-3 rounded-xl text-center text-sm font-bold tracking-wide text-white transition-all duration-300 bg-gradient-to-r ${item.gradient} opacity-80 hover:opacity-100`}
@@ -265,7 +266,7 @@ export default function Gallery() {
           </h3>
           <p className="text-white/50 mb-8 relative z-10">No need to leave your home or office. We come to you.</p>
           <a
-            href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service"
+            href={SITE.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="relative z-10 inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-bold rounded-full text-lg hover:scale-105 active:scale-95 transition-transform gold-glow"

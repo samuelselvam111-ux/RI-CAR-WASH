@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { SITE } from '@/lib/site';
 
 const plans = [
   { name: "4 Seater Cars", price: "399", popular: false },
@@ -45,14 +46,14 @@ export default function Pricing() {
               <div className="text-center mb-8">
                 <h3 className="text-xl text-white/80 font-medium mb-4">{plan.name}</h3>
                 <div className="flex items-start justify-center gap-1">
-                  <span className="text-2xl text-primary font-bold mt-2">₹</span>
+                  <span className="text-2xl text-primary font-bold mt-2">Rs.</span>
                   <span className="text-6xl font-bold text-white">{plan.price}</span>
                 </div>
               </div>
 
               <div className="mt-auto pt-8 border-t border-white/10">
                 <a 
-                  href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service"
+                  href={SITE.whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`block w-full py-4 rounded-xl text-center font-bold transition-all duration-300 ${
@@ -71,3 +72,4 @@ export default function Pricing() {
     </section>
   );
 }
+

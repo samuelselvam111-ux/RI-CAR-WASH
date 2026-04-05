@@ -127,12 +127,22 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   * {
     @apply border-border;
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply bg-background font-sans text-foreground antialiased;
+    overflow-x: hidden;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 }
 
@@ -201,4 +211,10 @@
 }
 .neon-green {
   box-shadow: 0 0 20px rgba(52,211,153,0.5), 0 0 40px rgba(52,211,153,0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

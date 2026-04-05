@@ -1,38 +1,44 @@
 import React from 'react';
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { Instagram, MessageCircle } from 'lucide-react';
+import { SITE } from '@/lib/site';
 
 export default function Footer() {
   return (
     <footer className="bg-black py-12 border-t border-white/5">
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-3">
-          <img 
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=64" 
-            alt="Logo" 
-            className="w-8 h-8 rounded-full object-cover border border-primary/30"
+          <img
+            src={SITE.logoPath}
+            alt={`${SITE.brandName} logo`}
+            className="w-8 h-8 rounded-full border border-primary/30 object-cover"
+            loading="lazy"
+            decoding="async"
           />
-          <span className="font-bold text-white tracking-wide">RI Car Detailing © 2025</span>
+          <span className="font-bold text-white tracking-wide">{SITE.brandName} Copyright 2026</span>
         </div>
 
         <div className="flex items-center gap-6">
           <a 
-            href="https://www.instagram.com/ri_car_detailing_01?igsh=dDk5eWV1azRsYTV1" 
+            href={SITE.instagramUrl}
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white/50 hover:text-white transition-colors"
+            aria-label="Visit Instagram profile"
           >
-            <FaInstagram className="w-6 h-6" />
+            <Instagram className="w-6 h-6" />
           </a>
           <a 
-            href="https://wa.me/918778341878" 
+            href={SITE.whatsappUrl}
             target="_blank" 
             rel="noopener noreferrer"
             className="text-white/50 hover:text-white transition-colors"
+            aria-label="Chat on WhatsApp"
           >
-            <FaWhatsapp className="w-6 h-6" />
+            <MessageCircle className="w-6 h-6" />
           </a>
         </div>
       </div>
     </footer>
   );
 }
+

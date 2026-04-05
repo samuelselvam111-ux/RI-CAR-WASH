@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import logoImg from '@assets/WhatsApp_Image_2026-04-05_at_12.22.43_PM_1775372021047.jpeg';
+import { SITE } from '@/lib/site';
 
 function RILogo({ size = 40 }: { size?: number }) {
   return (
@@ -80,10 +80,12 @@ function LogoImage({ size = 44 }: { size?: number }) {
   if (imgFailed) return <RILogo size={size} />;
   return (
     <img
-      src="https://www.instagram.com/p/DRxGfE_iam4/media/?size=l"
-      alt="RI Car Detailing Logo"
+      src={SITE.logoPath}
+      alt={`${SITE.brandName} logo`}
       width={size}
       height={size}
+      loading="eager"
+      decoding="async"
       onError={() => setImgFailed(true)}
       className="rounded-full object-cover"
       style={{
@@ -129,16 +131,16 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="#top" className="flex items-center gap-3 group">
             <motion.div whileHover={{ rotate: 5, scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
               <LogoImage size={44} />
             </motion.div>
             <div className="flex flex-col leading-none">
               <span className="text-lg md:text-xl font-black text-gradient-gold tracking-tight">
-                RI Car Detailing
+                {SITE.brandName}
               </span>
               <span className="text-[10px] tracking-[3px] uppercase text-white/40 font-medium">
-                Premium Car Wash
+                {SITE.tagline}
               </span>
             </div>
           </a>
@@ -156,7 +158,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service"
+              href={SITE.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-2.5 rounded-full font-bold text-sm tracking-wide transition-all duration-300 hover:scale-105 active:scale-95"
@@ -175,6 +177,8 @@ export default function Navbar() {
             className="md:hidden text-white p-2"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
           >
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -187,6 +191,7 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
+          id="mobile-menu"
           className="fixed top-[60px] left-0 right-0 z-40 md:hidden"
           style={{
             background: 'rgba(5,5,5,0.97)',
@@ -206,7 +211,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service"
+              href={SITE.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 w-full py-4 rounded-full font-bold text-center text-black"

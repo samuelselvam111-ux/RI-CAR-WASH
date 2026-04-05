@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Sparkles, CheckCircle2 } from 'lucide-react';
+import { SITE } from '@/lib/site';
 
 const highlights = [
   "Doorstep Service",
@@ -10,20 +11,12 @@ const highlights = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background Image with Rich Overlay */}
+    <section id="top" className="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden">
+      {/* Background layers */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1920&q=80"
-          alt="Luxury Car Wash"
-          className="w-full h-full object-cover scale-105"
-          style={{ objectPosition: 'center 30%' }}
-        />
-        {/* Multi-layer rich overlay */}
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black"></div>
-        {/* Color tint for vibrancy */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-950/30 via-transparent to-amber-950/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_30%),radial-gradient(circle_at_20%_30%,rgba(6,182,212,0.18),transparent_24%),linear-gradient(135deg,#030303_0%,#0f172a_45%,#090909_100%)]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(130deg,transparent_0%,rgba(255,255,255,0.04)_15%,transparent_30%,transparent_70%,rgba(255,215,0,0.08)_100%)] opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/15 to-black/70"></div>
       </div>
 
       {/* Floating colorful orbs */}
@@ -87,7 +80,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-xl md:text-2xl text-white/75 max-w-xl mb-8 font-light"
         >
-          Door Step Car Wash at Your Convenience
+          Premium doorstep car wash and detailing service at your convenience.
         </motion.p>
 
         {/* Highlights */}
@@ -113,7 +106,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center gap-4 mb-10"
         >
           <a
-            href="https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service"
+            href={SITE.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="relative group px-10 py-4 font-black text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95"
@@ -124,11 +117,11 @@ export default function Hero() {
             }}
           >
             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
-            <span className="relative">Book Now — Free Visit</span>
+            <span className="relative">Book Now - Free Visit</span>
           </a>
 
           <a
-            href="tel:8778341878"
+            href={`tel:${SITE.phonePlain}`}
             className="flex items-center gap-3 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105"
             style={{
               background: 'rgba(255,255,255,0.08)',
@@ -138,7 +131,7 @@ export default function Hero() {
             }}
           >
             <Phone className="w-5 h-5" style={{ color: '#06b6d4' }} />
-            <span>8778341878</span>
+            <span>{SITE.phoneDisplay}</span>
           </a>
         </motion.div>
       </div>
@@ -163,3 +156,4 @@ export default function Hero() {
     </section>
   );
 }
+
