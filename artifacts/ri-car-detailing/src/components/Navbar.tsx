@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import logoImg from '@assets/WhatsApp_Image_2026-04-05_at_12.22.43_PM_1775372021047.jpeg';
 
 function RILogo({ size = 40 }: { size?: number }) {
   return (
