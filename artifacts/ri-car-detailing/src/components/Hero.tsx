@@ -63,7 +63,7 @@ export default function Hero() {
         >
           <Sparkles className="w-4 h-4 text-amber-400" />
           <span className="text-sm font-bold tracking-widest uppercase" style={{ color: '#FFD700' }}>
-            Premium Auto Spa
+            Premium Car Wash
           </span>
         </motion.div>
 

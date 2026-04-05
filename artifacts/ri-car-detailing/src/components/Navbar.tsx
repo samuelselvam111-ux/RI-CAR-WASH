@@ -74,6 +74,27 @@ function RILogo({ size = 40 }: { size?: number }) {
   );
 }
 
+function LogoImage({ size = 44 }: { size?: number }) {
+  const [imgFailed, setImgFailed] = useState(false);
+  if (imgFailed) return <RILogo size={size} />;
+  return (
+    <img
+      src="https://www.instagram.com/p/DRxGfE_iam4/media/?size=l"
+      alt="RI Car Detailing Logo"
+      width={size}
+      height={size}
+      onError={() => setImgFailed(true)}
+      className="rounded-full object-cover"
+      style={{
+        width: size,
+        height: size,
+        border: '2px solid rgba(212,175,55,0.5)',
+        boxShadow: '0 0 12px rgba(212,175,55,0.3)',
+      }}
+    />
+  );
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -109,14 +130,14 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <motion.div whileHover={{ rotate: 5, scale: 1.05 }} transition={{ type: 'spring', stiffness: 300 }}>
-              <RILogo size={44} />
+              <LogoImage size={44} />
             </motion.div>
             <div className="flex flex-col leading-none">
               <span className="text-lg md:text-xl font-black text-gradient-gold tracking-tight">
                 RI Car Detailing
               </span>
               <span className="text-[10px] tracking-[3px] uppercase text-white/40 font-medium">
-                Premium Auto Spa
+                Premium Car Wash
               </span>
             </div>
           </a>
