@@ -16,6 +16,16 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
 
+## Artifacts
+
+### RI Car Detailing (`artifacts/ri-car-detailing`)
+- **Type**: React + Vite (frontend only, no backend)
+- **Preview path**: `/`
+- **Description**: Premium car detailing & car wash landing page for RI Car Detailing brand
+- **Theme**: Black, gold, white — dark luxury automotive
+- **Sections**: Hero, Services, Pricing, Premium Package, Gallery, CTA, Contact, Footer
+- **Features**: Framer Motion animations, glassmorphism UI, WhatsApp booking integration, Instagram/Maps links, embla-carousel gallery
+
 ## Key Commands
 
 - `pnpm run typecheck` — full typecheck across all packages

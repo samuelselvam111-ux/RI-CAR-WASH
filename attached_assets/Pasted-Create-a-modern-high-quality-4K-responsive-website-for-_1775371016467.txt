@@ -1,0 +1,103 @@
+Create a modern, high-quality 4K responsive website for a car detailing and car wash service brand named "RI Car Detailing".
+
+Design Style:
+
+Premium, glossy, automotive luxury theme
+
+Black, gold, white color combination with water splash effects
+
+Smooth animations and glassmorphism UI
+
+4K ultra HD visuals with realistic car detailing images
+
+Sections Required:
+
+Hero Section:
+
+Big heading: "The Best Car Wash Service"
+
+Subtext: "Door Step Car Wash at Your Convenience"
+
+Background: Luxury car with water splash and foam effect
+
+Highlight phone number: 8778341878
+
+Add a strong "Book Now" button
+
+Services Section:
+
+Organic Foam Car Wash
+
+Tyre Dressing Spa
+
+Interior Vacuum Cleaning
+
+Dashboard & Door Polish
+
+Glass Cleaning
+
+Alloy Wheel Cleaning
+
+Each service with icons and hover effects
+
+Pricing Section:
+
+4 Seater Cars – ₹399
+
+5 Seater Cars – ₹449
+
+7 Seater Cars – ₹500
+
+Highlight cards with glow effect
+
+Premium Package Section:
+
+Full Detailing – ₹500
+
+Includes:
+
+Tyre Polish
+
+Dash & Door Polish
+
+Interior Deep Cleaning
+
+Full Foam Wash
+
+Gallery Section:
+
+Before/After car wash images
+
+Carousel slider
+
+Call To Action Section:
+
+"Book Your Car Wash Today!"
+
+Big glowing button
+
+Contact Section:
+
+Name: Sakthikumar
+
+Phone: +91 8778341878
+
+Location: Arumuganeri, Thoothukudi, Tiruchendur
+
+WhatsApp button
+Instagram button 
+
+Functional Requirement:
+
+When user clicks "Book Now", it should open WhatsApp with pre-filled message:
+
+"Hi, I want to book a car wash service."
+
+WhatsApp link:
+
+https://wa.me/918778341878?text=Hi%20I%20want%20to%20book%20a%20car%20wash%20service
+
+add image on browser site and add webaite logo image :https://www.instagram.com/p/DRxGfE_iam4/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==
+Instagram link :https://www.instagram.com/ri_car_detailing_01?igsh=dDk5eWV1azRsYTV1
+
+Map button:Arumuganeri https://www.google.com/search?kgmid=%2Fm%2F0f0699&hl=en-IN&q=Arumuganeri&shem=dlvsc&shndl=17&source=sh%2Fx%2Fkp%2Fosrp%2Fm1%2F4&kgs=d73313f14ce6873c
